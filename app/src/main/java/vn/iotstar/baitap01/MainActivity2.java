@@ -1,6 +1,5 @@
 package vn.iotstar.baitap01;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -12,8 +11,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
-
-import org.w3c.dom.Text;
 
 import java.util.Random;
 
@@ -34,6 +31,7 @@ public class MainActivity2 extends AppCompatActivity {
 
         TextView txtVw_generated = findViewById(R.id.txtVw_generated);
         TextView txtVw_counter = findViewById(R.id.txtVw_counter);
+        txtVw_counter.setText(getString(R.string.cau4Counter, 0, 0));
 
         Button btn_beginCau4 = findViewById(R.id.btn_begin);
         btn_beginCau4.setOnClickListener(new View.OnClickListener() {
@@ -43,7 +41,7 @@ public class MainActivity2 extends AppCompatActivity {
                 int oddCount = 0, evenCount = 0;
                 Random random = new Random();
 
-                StringBuilder numbersStringBuilder = new StringBuilder("Số đã tạo: ");
+                StringBuilder numbersStringBuilder = new StringBuilder(getString(R.string.cau4Generated));
                 StringBuilder logStringBuilder = new StringBuilder();
 
                 // Generate random numbers and count odd/even
@@ -61,24 +59,18 @@ public class MainActivity2 extends AppCompatActivity {
 
                 // Update the UI
                 txtVw_generated.setText(numbersStringBuilder.toString());
-                txtVw_counter.setText("Đếm số chẵn: " + evenCount + ", Đếm số lẻ: " + oddCount);
+                String counterTxt = getString(R.string.cau4Counter, evenCount, oddCount);
+                txtVw_counter.setText(counterTxt);
 
                 // Log the results
-                Log.d(TAG, "Số đã tạo: " + logStringBuilder.toString());
-                Log.d(TAG, "Đếm số chẵn: " + evenCount + ", Đếm số lẻ: " + oddCount);
+                Log.d(TAG, R.string.cau4Generated + logStringBuilder.toString());
+                Log.d(TAG, counterTxt);
             }
         });
 
-        Button btn_Cau2 = findViewById(R.id.btn_Cau2);
-        btn_Cau2.setOnClickListener(view -> {
-            Intent intent = new Intent(MainActivity2.this, MainActivity.class);
-            startActivity(intent);
-        });
-
-        Button btn_Cau5 = findViewById(R.id.btn_Cau5);
-        btn_Cau5.setOnClickListener(view -> {
-            Intent intent = new Intent(MainActivity2.this, MainActivity3.class);
-            startActivity(intent);
+        Button btn_return = findViewById(R.id.btn_return);
+        btn_return.setOnClickListener(view -> {
+            this.finish();
         });
     }
 }

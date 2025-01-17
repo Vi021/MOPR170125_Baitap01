@@ -1,13 +1,13 @@
 <resources>
     <string name="app_name">Baitap01</string>
     <string name="_22110459">22110459 - Trần Triệu Vĩ</string>
-    <string name="cau_2">Câu 2</string>
-    <string name="cau_4">Câu 4</string>
-    <string name="cau_5">Câu 5</string>
-    <string name="beginCau4">Bắt đầu</string>
-    <string name="cau4Generated">Số đã tạo:</string>
-    <string name="cau4Counter">Đếm số chẵn: 0, Đếm số lẻ: 0</string>
+    <string name="cau4">Câu 4</string>
+    <string name="cau5">Câu 5</string>
+    <string name="cau4Begin">Bắt đầu</string>
+    <string name="cau4Generated">"Số đã tạo: "</string>
+    <string name="cau4Counter">Đếm số chẵn: %1$d, Đếm số lẻ: %2$d</string>
     <string name="cau5Input">Nhập chuỗi bất kỳ</string>
-    <string name="cau5Result">Kết quả:</string>
-    <string name="cau5Toast">Toast it</string>
+    <string name="cau5Result">"Kết quả: "</string>
+    <string name="cau5Toast">Toast</string>
+    <string name="cau5Warning">Chuỗi quá ngắn</string>
 </resources>

@@ -1,6 +1,5 @@
 package vn.iotstar.baitap01;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -57,21 +56,14 @@ public class MainActivity3 extends AppCompatActivity {
                     // Display a Toast message
                     Toast.makeText(MainActivity3.this, finalResult, Toast.LENGTH_LONG).show();
                 } else {
-                    Toast.makeText(MainActivity3.this, "Chuỗi quá ngắn", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(MainActivity3.this, R.string.cau5Warning, Toast.LENGTH_SHORT).show();
                 }
             }
         });
 
-        Button btn_Cau2 = findViewById(R.id.btn_Cau2);
-        btn_Cau2.setOnClickListener(view -> {
-            Intent intent = new Intent(MainActivity3.this, MainActivity.class);
-            startActivity(intent);
-        });
-
-        Button btn_Cau4 = findViewById(R.id.btn_Cau4);
-        btn_Cau4.setOnClickListener(view -> {
-            Intent intent = new Intent(MainActivity3.this, MainActivity2.class);
-            startActivity(intent);
+        Button btn_return = findViewById(R.id.btn_return);
+        btn_return.setOnClickListener(view -> {
+            this.finish();
         });
     }
 }

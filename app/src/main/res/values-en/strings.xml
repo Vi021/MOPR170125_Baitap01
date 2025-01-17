@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Baitap01</string>
+    <string name="_22110459">22110459 - Tran Trieu Vi</string>
+    <string name="cau4">Q.4</string>
+    <string name="cau5">Q.5</string>
+    <string name="cau4Begin">Begin</string>
+    <string name="cau4Generated">"Generated: "</string>
+    <string name="cau4Counter">Even count: %1$d, Odd count: %2$d</string>
+    <string name="cau5Input">Type something</string>
+    <string name="cau5Result">"Result: "</string>
+    <string name="cau5Toast">Toast it</string>
+    <string name="cau5Warning">Text too short</string>
+</resources>
